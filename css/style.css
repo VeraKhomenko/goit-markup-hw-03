@@ -1,163 +1,342 @@
-/* основный свойства */
+/* основныe свойства */
 
 :root {
-    --primary-text-color: #212121;
-    --primary-background-color: #ffffff;
-    --accent-color: #2196f3;
-    --btn-footer-color: #2f303a;
-    --logo-color: #000000;
-    --secondary-background: #f5f4fa;
-    --subtitle-text-color: #757575;
-    --opposite-text-color: #ffffff;
+  --primary-text-color: #212121;
+  --primary-background-color: #ffffff;
+  --accent-color: #2196f3;
+  --btn-footer-color: #2f303a;
+  --logo-color: #000000;
+  --secondary-background: #f5f4fa;
+  --subtitle-text-color: #757575;
+  --opposite-text-color: #ffffff;
 }
 
 body {
-    font-family: 'Roboto', 'Verdana', 'Tahoma', sans-serif;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+  font-family: 'Roboto', 'Verdana', 'Tahoma', sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 
-    background: var(--primary-background-color);
-    color: var(--primary-text-color);
+  background: var(--primary-background-color);
+  color: var(--primary-text-color);
 }
 
+/* утилиты сброс маркеров для всех списков */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-/* сброс маркеров для всех списков */
-ul {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
+.list {
+  /* font-size: 0; */
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+h3,
+h4,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding: 0px;
+}
+
+/* геометрия */
+/* Основные  */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+}
+
+.indented {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.flexelement,
+.portfolioelement {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.flexlist {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fourrowel {
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+}
+
+.flexlist .fourrowel:last-child,
+.flexlist .flexelement:last-child {
+  margin-right: 0;
+}
+
+/* индивидуальные */
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+}
+
+.maxindented {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-bottom: 94px;
+}
+
+.container-banner {
+  /* align-items: center; */
+  /* max-width: 696px;  - если ставить текст уезжает влево*/
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.order-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  /* margin: 0 auto 30px;  если задать ширину, то центрировать можно маржин авто*/
+  /* outline: 1px solid red; убрать */
+
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.363;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.main-menu {
+  display: flex;
+  margin-left: 93px;
+}
+
+.contact {
+  margin-left: auto;
+}
+
+.main-menu .item+.item {
+  margin-left: 50px;
+}
+
+.comcontent {
+  padding: 30px;
+  text-align: center;
+}
+
+.name {
+  padding-bottom: 10px;
+
+}
+
+/* portfolio стр портфолио фильтры */
+.main-filters {
+  display: flex;
+  justify-content: center;
+}
+
+.main-filters .item+.item {
+  margin-left: 8px;
+}
+
+.portfolioelement:nth-child(3n) {
+  margin-right: 0;
+}
+
+.portfolioelement:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* 
+.logo {
+    margin-bottom: 20px; - смещает вверх логотип
+
+} */
+
+.header {
+  /* padding-top: 24px;
+    padding-bottom: 25px; */
+  display: flex;
+  align-items: center;
+}
+
+.minindented {
+  margin-bottom: 50px;
+}
+
+
+li div.signature {
+  padding: 20px 24px;
+  text-align: left;
+}
+
+.signature .subtitle {
+  text-align: left;
+}
+
+.features-title {
+  display: none;
 }
 
 /* логотип */
 .logo .focused {
-    font-family: Raleway;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.192;
-
-    color: var(--logo-color);
+  margin-top: 0;
+  font-family: Raleway;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.192;
+  color: var(--logo-color);
 }
 
 .logo .logo-half {
-    color: var(--opposite-text-color);
+  color: var(--opposite-text-color);
 }
 
 .logo-blue {
-    color: #2196f3;
+  color: #2196f3;
 }
 
 /* заголовки */
 h2 {
-    font-size: 36px;
-    text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 36px;
+  text-align: center;
 }
 
 li .title {
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 0.06em;
-
-    color: var(--primary-text-color);
+  /* padding-top: 20px; */
+  padding-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  color: var(--primary-text-color);
 }
 
-.name,
-a.main-filters-link,
-.subtitle {
-    font-size: 16px;
+.middling {
+  font-size: 16px;
 }
 
 .team {
-    background: var(--secondary-background);
+  background: var(--secondary-background);
 }
 
 .subtitle {
-    color: var(--subtitle-text-color);
+  color: var(--subtitle-text-color);
 }
 
-/* подвал */
+/*footer подвал */
+.footer a {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footerlist li:first-child {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
 footer,
 .picture-banner {
-    color: var(--opposite-text-color);
-    background: var(--btn-footer-color);
+  color: var(--opposite-text-color);
+  background: var(--btn-footer-color);
 }
 
 .list .contact-link-footer {
-    color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .item .contact-link,
-.features-list-text {
-    color: var(--subtitle-text-color);
+.featurestext {
+  color: var(--subtitle-text-color);
 }
 
 /* подстили */
 
-.order-title {
-    font-size: 44px;
-    font-weight: 900;
-    line-height: 1.363;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    text-align: center;
-}
-
 /* кнопка-ссылка */
 .button {
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.875;
-
-    background: var(--accent-color);
-    color: var(--opposite-text-color);
-
-    border-radius: 4px;
-    border: none;
+  display: inline-block;
+  min-width: 200px;
+  padding: 10px 32px;
+  border-radius: 4px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  text-align: center;
+  background: var(--accent-color);
+  color: var(--opposite-text-color);
 }
 
 .focused-button {
-    font-weight: 500;
-
-    background: var(--secondary-background);
-
-    border: none;
-    border-radius: 4px;
-    height: 38px;
+  display: inline-block;
+  min-width: 73px;
+  /* text-align: center; */
+  border: none;
+  border-radius: 4px;
+  height: 38px;
+  padding: 6px 22px;
+  font-weight: 500;
+  background: var(--secondary-background);
 }
 
 .focused-button:hover,
 .focused-button:focus {
-    background: var(--accent-color);
-    color: var(--opposite-text-color);
+  background: var(--accent-color);
+  color: var(--opposite-text-color);
 }
 
 .features-uppercase {
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1.142;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.142;
 }
 
 .main-menu .focused {
-    font-weight: 500;
-    line-height: 1.142;
-    letter-spacing: 0.02em;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  line-height: 1.142;
+  letter-spacing: 0.02em;
 }
 
 address {
-    font-style: normal;
+  font-style: normal;
 }
 
 .focused {
-    font-weight: 400;
-    color: var(--primary-text-color);
+  font-weight: 400;
+  color: var(--primary-text-color);
 }
 
 .main-menu .focused.current,
 .focused:hover,
 .focused:focus {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
