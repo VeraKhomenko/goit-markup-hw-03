@@ -133,18 +133,17 @@ p {
   margin-left: auto;
 }
 
-.main-menu .item+.item {
+.main-menu .item + .item {
   margin-left: 50px;
 }
 
 .comcontent {
-  padding: 30px;
+  margin: 30px;
   text-align: center;
 }
 
 .name {
-  padding-bottom: 10px;
-
+  margin-bottom: 10px;
 }
 
 /* portfolio стр портфолио фильтры */
@@ -153,7 +152,7 @@ p {
   justify-content: center;
 }
 
-.main-filters .item+.item {
+.main-filters .item + .item {
   margin-left: 8px;
 }
 
@@ -170,26 +169,17 @@ p {
   padding-bottom: 60px;
 }
 
-/* 
-.logo {
-    margin-bottom: 20px; - смещает вверх логотип
-
-} */
-
 .header {
-  /* padding-top: 24px;
-    padding-bottom: 25px; */
   display: flex;
   align-items: center;
 }
 
 .minindented {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
-
 li div.signature {
-  padding: 20px 24px;
+  margin: 20px 24px;
   text-align: left;
 }
 
@@ -280,7 +270,7 @@ footer,
 .button {
   display: inline-block;
   min-width: 200px;
-  padding: 10px 32px;
+  margin: 10px 32px;
   border-radius: 4px;
   border: none;
   font-weight: 700;
@@ -339,4 +329,8 @@ address {
 .focused:hover,
 .focused:focus {
   color: var(--accent-color);
+}
+
+.border {
+  border-top: 1px solid #ececec;
 }
